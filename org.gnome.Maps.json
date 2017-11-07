@@ -1,0 +1,198 @@
+{
+    "app-id": "org.gnome.Maps",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.24",
+    "branch": "stable",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-maps",
+    "tags": [],
+    "finish-args": [
+        /* X11 + XShm access */
+        "--share=ipc", "--socket=x11",
+        /* Wayland access */
+        "--socket=wayland",
+        /* OpenGL access */
+        "--device=dri",
+        /* Needs to talk to the network: */
+        "--share=network",
+        /* Work around bug 777706 */
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        /* Evolution data server access */
+        "--talk-name=org.gnome.OnlineAccounts",
+        "--talk-name=org.gnome.evolution.dataserver.AddressBook9",
+        "--talk-name=org.gnome.evolution.dataserver.Calendar7",
+        "--talk-name=org.gnome.evolution.dataserver.Sources5",
+        "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
+        /* Needed to save OAuth token from OpenStreetMap */
+        "--talk-name=org.freedesktop.secrets",
+        /* Needed to get geo-positioning */
+        "--system-talk-name=org.freedesktop.GeoClue2",
+        /* Needed for dconf to work */
+        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+     ],
+    "build-options" : {
+        "cflags": "-O2 -g",
+        "cxxflags": "-O2 -g",
+        "env": {
+            "V": "1"
+        }
+    },
+    "cleanup": ["/include", "/lib/pkgconfig",
+                "/share/pkgconfig", "/share/aclocal",
+                "/man", "/share/man", "/share/gtk-doc",
+                "/share/vala",
+                "*.la", "*.a"],
+    "modules": [
+
+        {
+            "name": "libical",
+            "cleanup": [ "/lib/cmake"],
+            "buildsystem": "cmake",
+            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
+                             "-DBUILD_SHARED_LIBS:BOOL=ON" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/libical/libical/releases/download/v2.0.0/libical-2.0.0.tar.gz",
+                    "sha256": "654c11f759c19237be39f6ad401d917e5a05f36f1736385ed958e60cf21456da"
+                }
+            ]
+        },
+        {
+            "name": "libgee",
+            "build-options" : {
+                "env": {
+                    "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
+                    "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.0.tar.xz",
+                    "sha256": "21308ba3ed77646dda2e724c0e8d5a2f8d101fb05e078975a532d7887223c2bb"
+                }
+            ]
+        },
+        {
+            "name": "gnome-online-accounts",
+            "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.24/gnome-online-accounts-3.24.0.tar.xz",
+                    "sha256": "9e2f780e061641dfd692cc82269b0cac6cce73c74ce2d8a0a5e80889ed07c17b"
+                }
+            ]
+        },
+        {
+            "name": "geocode-glib",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.23/geocode-glib-3.23.90.tar.xz",
+                    "sha256": "f6b536a3b225ede73ef0592ad841640c5cde2a0e4bf3f416c893e8262b1dd7dc"
+                }
+            ]
+        },
+        {
+            "name": "libgweather",
+            "config-opts": ["--disable-vala"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgweather/3.24/libgweather-3.24.0.tar.xz",
+                    "sha256": "1089b932205085add19e5e1b63361c0cff1a2c46a67ab2dded6dd2ca87bdfa3d"
+                }
+            ]
+        },
+        {
+            "name": "evolution-data-server",
+            "cleanup": [
+                "/lib/cmake",
+                "/lib/evolution-data-server/*-backends",
+                "/libexec",
+                "/share/dbus-1/services"
+            ],
+            "buildsystem": "cmake",
+            "config-opts": [
+                "-DENABLE_GTK=ON",
+                "-DENABLE_GOOGLE_AUTH=OFF",
+                "-DENABLE_UOA=OFF",
+                "-DENABLE_GOOGLE=OFF",
+                "-DENABLE_VALA_BINDINGS=ON",
+                "-DENABLE_WEATHER=OFF",
+                "-DWITH_OPENLDAP=OFF",
+                "-DENABLE_INTROSPECTION=ON",
+                "-DENABLE_INSTALLED_TESTS=OFF",
+                "-DENABLE_GTK_DOC=OFF",
+                "-DENABLE_EXAMPLES=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.24/evolution-data-server-3.24.1.tar.xz",
+                    "sha256": "6344b8035e2bcc5cd404bc86e6d874cdf54102a8948aa0ab7b4e717d328881b0"
+                }
+            ]
+        },
+        {
+            "name": "folks",
+            "cleanup": [ "/bin", "/share/GConf" ],
+            "config-opts": ["--disable-telepathy-backend",
+                            "--disable-ofono-backend",
+                            "--disable-bluez-backend",
+                            "--disable-fatal-warnings"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/folks/0.11/folks-0.11.3.tar.xz",
+                    "sha256": "2a2828a7c87fd39e5786f8f2cf0ebe47576a74974f1355c478a6dc747d7bcb64"
+                }
+            ]
+        },
+        {
+            "name": "libchamplain",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.14.tar.xz",
+                    "sha256": "f1621ddec1ffe64ca01c3216db8663f60ae0bb107521195fc6856119d4b4568f"
+                }
+            ]
+        },
+        {
+            /* we need rest-0.7 so we use a tarball for it */
+            "name": "librest",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://git.gnome.org/browse/librest/snapshot/librest-0.8.1.tar.xz",
+                    "sha256": "8ae2d5b993b568d87fb33767cdf43dc81aa36371351e9154680372e1536fb594"
+                }
+            ]
+        },
+        {
+            "name": "libgfbgraph",
+            "cleanup": [ "/doc/libgfbgraph"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.3.tar.xz",
+                    "sha256": "da1179083cde2b649d7491c745250a00d292e390fd620b7dd2dd95a122dae0b6"
+                }
+            ]
+        },
+        {
+            "name": "gnome-maps",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.24/gnome-maps-3.24.3.tar.xz",
+                    "sha256": "5ef3ec36aa76eb9a49a15ee61539bea7b59e8aa0a802483df6cedcc65566d0d6"
+                }
+            ]
+        }
+    ]
+}
