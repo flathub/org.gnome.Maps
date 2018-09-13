@@ -17,6 +17,11 @@
         "--share=network",
         /* Work around bug 777706 */
         "--system-talk-name=org.freedesktop.NetworkManager",
+        /* Other requested permissions */
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
+        "--talk-name=org.xfce.SessionManager",
+        "--talk-name=org.gnome.SessionManager",
         /* Evolution data server access */
         "--talk-name=org.gnome.OnlineAccounts",
         "--talk-name=org.gnome.evolution.dataserver.AddressBook9",
@@ -44,11 +49,10 @@
                 "/share/vala",
                 "*.la", "*.a"],
     "modules": [
-
         {
             "name": "libical",
             "cleanup": [ "/lib/cmake"],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [ "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
                              "-DBUILD_SHARED_LIBS:BOOL=ON" ],
             "sources": [
@@ -70,8 +74,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.0.tar.xz",
-                    "sha256": "21308ba3ed77646dda2e724c0e8d5a2f8d101fb05e078975a532d7887223c2bb"
+                    "url": "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.1.tar.xz",
+                    "sha256": "bb2802d29a518e8c6d2992884691f06ccfcc25792a5686178575c7111fea4630"
                 }
             ]
         },
@@ -81,8 +85,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.26/gnome-online-accounts-3.26.1.tar.xz",
-                    "sha256": "603c110405cb89a01497a69967f10e3f3f36add3dc175b062ec4c5ed4485621b"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.0.tar.xz",
+                    "sha256": "27d9d88942aa02a1f8d003dfe515483d8483f216ba1e297a8ef67a42cf4bcfc3"
                 }
             ]
         },
@@ -91,19 +95,20 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/geocode-glib/3.25/geocode-glib-3.25.4.tar.xz",
-                    "sha256": "75ea9c2a1bf108651521c4274132b0f424cf950b3fdc226852bc3089d97664dd"
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.0.tar.xz",
+                    "sha256": "ea4086b127050250c158beff28dbcdf81a797b3938bb79bbaaecc75e746fbeee"
                 }
             ]
         },
         {
             "name": "libgweather",
-            "config-opts": ["--disable-vala"],
+            "buildsystem": "meson",
+            "config-opts": ["-Denable-vala=false"],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/3.26/libgweather-3.26.0.tar.xz",
-                    "sha256": "5b84badc0b3ecffff5db1bb9a7cc4dd4e400a8eb3f1282348f8ee6ba33626b6e"
+                    "url": "https://download.gnome.org/sources/libgweather/3.28/libgweather-3.28.2.tar.xz",
+                    "sha256": "081ce81653afc614e12641c97a8dd9577c524528c63772407ae2dbcde12bde75"
                 }
             ]
         },
@@ -115,7 +120,7 @@
                 "/libexec",
                 "/share/dbus-1/services"
             ],
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DENABLE_GTK=ON",
                 "-DENABLE_GOOGLE_AUTH=OFF",
@@ -132,8 +137,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.26/evolution-data-server-3.26.1.tar.xz",
-                    "sha256": "ea207a3abd5e7bb8ccaa88741de7715a128083efdf8296af2c3a2fb8d072a4b3"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.30/evolution-data-server-3.30.0.tar.xz",
+                    "sha256": "d466c1fcc4cf17e9923b7166fbd1bd66c53f518a90323fbff6ff08f74cb50dee"
                 }
             ]
         },
@@ -163,13 +168,12 @@
             ]
         },
         {
-            /* we need rest-0.7 so we use a tarball for it */
             "name": "librest",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://git.gnome.org/browse/librest/snapshot/librest-0.8.1.tar.xz",
-                    "sha256": "8ae2d5b993b568d87fb33767cdf43dc81aa36371351e9154680372e1536fb594"
+                    "url": "https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
+                    "sha256": "0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9"
                 }
             ]
         },
@@ -186,11 +190,12 @@
         },
         {
             "name": "gnome-maps",
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.28/gnome-maps-3.28.0.tar.xz",
-                    "sha256": "c03f7a33b8093be6d4e124628c970b41eb8a8903be8a8abe9b3870760c7facc6"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.30/gnome-maps-3.30.0.tar.xz",
+                    "sha256": "95734f8d2790d18f2d6e7bb9eb8b771a15201938d4dd5fbba10efc4de1ae83ed"
                 }
             ]
         }
