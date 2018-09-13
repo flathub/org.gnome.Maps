@@ -1,11 +1,9 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
-    "branch": "stable",
+    "runtime-version": "3.26",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
-    "tags": [],
     "finish-args": [
         /* X11 + XShm access */
         "--share=ipc", "--socket=x11",
