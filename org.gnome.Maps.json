@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.30",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -62,12 +62,12 @@
             ]
         },
         {
-            "name": "libgee",
+            "name" : "libgee",
             "build-options" : {
-                "env": {
-                    "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR": "/app/share/gir-1.0",
-                    "PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR": "/app/lib/girepository-1.0"
-                }
+                "make-install-args" : [
+                    "girdir=/app/share/gir-1.0",
+                    "typelibdir=/app/lib/girepository-1.0"
+                ]
             },
             "sources": [
                 {
@@ -130,7 +130,8 @@
                 "-DENABLE_INTROSPECTION=ON",
                 "-DENABLE_INSTALLED_TESTS=OFF",
                 "-DENABLE_GTK_DOC=OFF",
-                "-DENABLE_EXAMPLES=OFF"
+                "-DENABLE_EXAMPLES=OFF",
+                "-DWITH_LIBDB=OFF"
             ],
             "sources": [
                 {
@@ -199,3 +200,4 @@
         }
     ]
 }
+
