@@ -136,8 +136,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.30/evolution-data-server-3.30.0.tar.xz",
-                    "sha256": "d466c1fcc4cf17e9923b7166fbd1bd66c53f518a90323fbff6ff08f74cb50dee"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.30/evolution-data-server-3.30.3.tar.xz",
+                    "sha256": "a39c12bfc14f72a1a577a63ab1f6d4a3b77ca25df8cdc7996261993b98be3ce0"
                 }
             ]
         },
@@ -193,8 +193,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.30/gnome-maps-3.30.0.tar.xz",
-                    "sha256": "95734f8d2790d18f2d6e7bb9eb8b771a15201938d4dd5fbba10efc4de1ae83ed"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.30/gnome-maps-3.30.3.tar.xz",
+                    "sha256": "d826c82c261db473b5330f1f2f6093fe67502b6c2e811797d90bb2efc3363368"
                 }
             ]
         }
