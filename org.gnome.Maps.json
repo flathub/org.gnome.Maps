@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.32",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -76,8 +76,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.1.tar.xz",
-                    "sha256": "7e968a325e959f0b2419bed5a4c5b6d3a9327aceebd72f4fb01478c78ce85b41"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.2.tar.xz",
+                    "sha256": "05c7e588c884a4145db376880303588f74b76d1fa11afbeccb74c6eff36b2fdc"
                 }
             ]
         },
@@ -87,8 +87,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.0.tar.xz",
-                    "sha256": "ea4086b127050250c158beff28dbcdf81a797b3938bb79bbaaecc75e746fbeee"
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.1.tar.xz",
+                    "sha256": "5baa6ab76a76c9fc567e4c32c3af2cd1d1784934c255bc5a62c512e6af6bde1c"
                 }
             ]
         },
@@ -99,8 +99,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/3.28/libgweather-3.28.2.tar.xz",
-                    "sha256": "081ce81653afc614e12641c97a8dd9577c524528c63772407ae2dbcde12bde75"
+                    "url": "https://download.gnome.org/sources/libgweather/3.32/libgweather-3.32.0.tar.xz",
+                    "sha256": "de9a2b392a8b27e012ed80bb9c950085692cd8e898c367c092df15f964a91d13"
                 }
             ]
         },
@@ -125,13 +125,13 @@
                 "-DENABLE_INSTALLED_TESTS=OFF",
                 "-DENABLE_GTK_DOC=OFF",
                 "-DENABLE_EXAMPLES=OFF",
-                "-DWITH_LIBDB=OFF" 
+                "-DWITH_LIBDB=OFF"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.30/evolution-data-server-3.30.3.tar.xz",
-                    "sha256": "a39c12bfc14f72a1a577a63ab1f6d4a3b77ca25df8cdc7996261993b98be3ce0"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.32/evolution-data-server-3.32.0.tar.xz",
+                    "sha256": "8e10b84974e483322e07a97c57dff56ffb208aa0c33e39a13208d6c52470ddde"
                 }
             ]
         },
@@ -187,8 +187,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.30/gnome-maps-3.30.3.tar.xz",
-                    "sha256": "d826c82c261db473b5330f1f2f6093fe67502b6c2e811797d90bb2efc3363368"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.32/gnome-maps-3.32.0.tar.xz",
+                    "sha256": "e8803c4e5952f364f55f3689e8bf7e111bb533ce6cb2f37cd35dd34e68217dbe"
                 }
             ]
         }
