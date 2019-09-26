@@ -1,35 +1,25 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.32",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
-        /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
-        /* Wayland access */
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
-        /* OpenGL access */
         "--device=dri",
-        /* Needs to talk to the network: */
         "--share=network",
-        /* Work around bug 777706 */
-        "--system-talk-name=org.freedesktop.NetworkManager",
-        /* Other requested permissions */
-        "--talk-name=org.gtk.vfs",
-        "--talk-name=org.gtk.vfs.*",
-        "--talk-name=org.xfce.SessionManager",
-        "--talk-name=org.gnome.SessionManager",
-        /* Evolution data server access */
         "--talk-name=org.gnome.OnlineAccounts",
-        "--talk-name=org.gnome.evolution.dataserver.AddressBook9",
+        "--talk-name=org.gnome.evolution.dataserver.AddressBook10",
         "--talk-name=org.gnome.evolution.dataserver.Calendar7",
         "--talk-name=org.gnome.evolution.dataserver.Sources5",
         "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
-        /* Needed to save OAuth token from OpenStreetMap */
+        "--system-talk-name=org.freedesktop.NetworkManager",
         "--talk-name=org.freedesktop.secrets",
-        /* Needed to get geo-positioning */
         "--system-talk-name=org.freedesktop.GeoClue2",
+
         /* Needed for dconf to work */
         "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
@@ -44,29 +34,20 @@
             "name": "libical",
             "cleanup": [ "/lib/cmake"],
             "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
-                             "-DBUILD_SHARED_LIBS:BOOL=ON" ],
+            "config-opts": [ 
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_INSTALL_LIBDIR=lib",
+                "-DBUILD_SHARED_LIBS:BOOL=ON",
+                "-DICAL_GLIB=true",
+                "-DGOBJECT_INTROSPECTION=true",
+                "-DICAL_GLIB_VAPI=true",
+                "-DICAL_BUILD_DOCS=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/libical/libical/releases/download/v2.0.0/libical-2.0.0.tar.gz",
-                    "sha256": "654c11f759c19237be39f6ad401d917e5a05f36f1736385ed958e60cf21456da"
-                }
-            ]
-        },
-        {
-            "name": "libgee",
-            "build-options" : {
-                "make-install-args": [
-                    "girdir=/app/share/gir-1.0",
-                    "typelibdir=/app/lib/girepository-1.0"
-                ]
-            },
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgee/0.20/libgee-0.20.1.tar.xz",
-                    "sha256": "bb2802d29a518e8c6d2992884691f06ccfcc25792a5686178575c7111fea4630"
+                    "url": "https://github.com/libical/libical/releases/download/v3.0.5/libical-3.0.5.tar.gz",
+                    "sha256": "7ad550c8c49c9b9983658e3ab3e68b1eee2439ec17b169a6b1e6ecb5274e78e6"
                 }
             ]
         },
@@ -76,8 +57,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.2.tar.xz",
-                    "sha256": "05c7e588c884a4145db376880303588f74b76d1fa11afbeccb74c6eff36b2fdc"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.34/gnome-online-accounts-3.34.0.tar.xz",
+                    "sha256": "c44fbce4eeb54703a2ab4954d54f11eb29666f9cf61b5275b9fe0fc033377f57"
                 }
             ]
         },
@@ -114,49 +95,61 @@
             ],
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DENABLE_GTK=ON",
+                "-DENABLE_GTK=OFF",
                 "-DENABLE_GOOGLE_AUTH=OFF",
                 "-DENABLE_UOA=OFF",
                 "-DENABLE_GOOGLE=OFF",
                 "-DENABLE_VALA_BINDINGS=ON",
-                "-DENABLE_WEATHER=OFF",
                 "-DWITH_OPENLDAP=OFF",
+                "-DWITH_LIBDB=OFF",
                 "-DENABLE_INTROSPECTION=ON",
                 "-DENABLE_INSTALLED_TESTS=OFF",
                 "-DENABLE_GTK_DOC=OFF",
                 "-DENABLE_EXAMPLES=OFF",
-                "-DWITH_LIBDB=OFF"
+                "-DENABLE_VALA_BINDINGS=ON",
+                "-DENABLE_INTROSPECTION=ON"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.32/evolution-data-server-3.32.0.tar.xz",
-                    "sha256": "8e10b84974e483322e07a97c57dff56ffb208aa0c33e39a13208d6c52470ddde"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.34/evolution-data-server-3.34.0.tar.xz",
+                    "sha256": "fb9db0a824ae01ecc63c82cf8e503fecdcba7118b919f04bda7d8d91f3e486cf"
                 }
+            ],
+            "modules":[
+                "shared-modules/intltool/intltool-0.51.json"
             ]
         },
         {
             "name": "folks",
+            "buildsystem": "meson",
             "cleanup": [ "/bin", "/share/GConf" ],
-            "config-opts": ["--disable-telepathy-backend",
-                            "--disable-ofono-backend",
-                            "--disable-bluez-backend",
-                            "--disable-fatal-warnings"],
+            "config-opts": [
+                "-Dbluez_backend=false",
+                "-Dofono_backend=false",
+                "-Dtelepathy_backend=false",
+                "-Dinspect_tool=false",
+                "-Dimport_tool=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.11/folks-0.11.4.tar.xz",
-                    "sha256": "a7b03ed30373e29f62fc3e6f498adce2d4909b852608fc2058a02fda9f80189a"
+                    "url": "https://download.gnome.org/sources/folks/0.13/folks-0.13.1.tar.xz",
+                    "sha256": "3df1c663b82fe211aead2b31cae1fc41d124e85436375762f6745c45ba46aa5d"
                 }
             ]
         },
         {
             "name": "libchamplain",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dvapi=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.16.tar.xz",
-                    "sha256": "4a7e31cf7889669aebf04631543af64435edd989685159b804911c6005db908d"
+                    "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.19.tar.xz",
+                    "sha256": "36842e326cdbe3cdbdab818472797eedb661dec842fe0579596a3a8d438b2aa4"
                 }
             ]
         },
@@ -187,8 +180,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.32/gnome-maps-3.32.0.tar.xz",
-                    "sha256": "e8803c4e5952f364f55f3689e8bf7e111bb533ce6cb2f37cd35dd34e68217dbe"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.34/gnome-maps-3.34.0.tar.xz",
+                    "sha256": "990b7f8cf7605a66efb01ab72ca18f6ca4d63f54261bb4b371bb96f97f10516f"
                 }
             ]
         }
