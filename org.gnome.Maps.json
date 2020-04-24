@@ -51,7 +51,7 @@
         },
         {
             "name": "gnome-online-accounts",
-            "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
+            "config-opts": ["--disable-documentation", "--disable-backend"],
             "sources": [
                 {
                     "type": "archive",
