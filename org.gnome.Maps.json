@@ -6,7 +6,6 @@
     "command": "gnome-maps",
     "finish-args": [
         "--share=ipc",
-        "--socket=x11",
         "--socket=fallback-x11",
         "--socket=wayland",
         "--device=dri",
@@ -51,7 +50,7 @@
         },
         {
             "name": "gnome-online-accounts",
-            "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
+            "config-opts": ["--disable-documentation", "--disable-backend"],
             "sources": [
                 {
                     "type": "archive",
@@ -95,7 +94,6 @@
             "config-opts": [
                 "-DENABLE_GTK=OFF",
                 "-DENABLE_GOOGLE_AUTH=OFF",
-                "-DENABLE_UOA=OFF",
                 "-DENABLE_GOOGLE=OFF",
                 "-DENABLE_VALA_BINDINGS=ON",
                 "-DWITH_OPENLDAP=OFF",
@@ -110,8 +108,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.36/evolution-data-server-3.36.1.tar.xz",
-                    "sha256": "13122b2edddb98306207d2a35d5ccae25a90702769ca0a0b51653b5984986796"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.36/evolution-data-server-3.36.2.tar.xz",
+                    "sha256": "98e274cfec16cee6a4b3b9c7897f6e1136d00e4f31a0d66214925abbac76e97b"
                 }
             ],
             "modules":[
@@ -178,8 +176,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.36/gnome-maps-3.36.1.tar.xz",
-                    "sha256": "1a32efd96ad898f77a636d2d0463d757009b4b812259c89ffdcb91d6afc052f9"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.36/gnome-maps-3.36.2.tar.xz",
+                    "sha256": "5ba219b9de98678cefa5848f6538db8dbd07f6c747fd43a99167a266878a9784"
                 }
             ]
         }
