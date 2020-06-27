@@ -15,8 +15,6 @@
         "--talk-name=org.gnome.evolution.dataserver.Calendar8",
         "--talk-name=org.gnome.evolution.dataserver.Sources5",
         "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
-        /* Work around bug 777706 */
-        "--system-talk-name=org.freedesktop.NetworkManager",
         "--talk-name=org.freedesktop.secrets",
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--metadata=X-DConf=migrate-path=/org/gnome/maps/"
