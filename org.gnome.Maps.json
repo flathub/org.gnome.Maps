@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "3.38",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -75,8 +75,19 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.0.tar.xz",
-                    "sha256": "d2ffeec01788d03d1bbf35113fc2f054c6c3600721088f827bcc31e5c603a32d"
+                    "url": "https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.1.tar.xz",
+                    "sha256": "de2709f0ee233b20116d5fa9861d406071798c4aa37830ca25f5ef2c0083e450"
+                }
+            ]
+        },
+        {
+            "name" : "libcanberra-gtk3",
+            "buildsystem" : "autotools",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+                    "sha256" : "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
                 }
             ]
         },
@@ -106,8 +117,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.36/evolution-data-server-3.36.3.tar.xz",
-                    "sha256": "1f5f48173d0f288219d73d4f193cb921ae631932ba84030f05751c42bb003db2"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.0.tar.xz",
+                    "sha256": "13689a7b55765806c4d5f3b05ef6c24b0bf9957b9ed9240c2dd09a2cdb13b0af"
                 }
             ],
             "modules":[
@@ -163,8 +174,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.3.tar.xz",
-                    "sha256": "da1179083cde2b649d7491c745250a00d292e390fd620b7dd2dd95a122dae0b6"
+                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.4.tar.xz",
+                    "sha256": "6065391f35e7335588cc6b0cc4c1abbce7341488573a654551264cb9793b9379"
                 }
             ]
         },
@@ -174,8 +185,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.36/gnome-maps-3.36.2.tar.xz",
-                    "sha256": "5ba219b9de98678cefa5848f6538db8dbd07f6c747fd43a99167a266878a9784"
+                    "url": "https://download.gnome.org/sources/gnome-maps/3.38/gnome-maps-3.38.0.tar.xz",
+                    "sha256": "55758340ebd084610283bf1f6fec6c042559a186eb8699c056a22dfef1d97f99"
                 }
             ]
         }
