@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -52,8 +52,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
-                    "sha256": "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.39/gnome-online-accounts-3.39.92.tar.xz",
+                    "sha256": "cf49159383482103ba2e4fff98658cabb0e4f12a396b582d69c2aff7b6abc7d4"
                 }
             ]
         },
@@ -75,8 +75,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.1.tar.xz",
-                    "sha256": "de2709f0ee233b20116d5fa9861d406071798c4aa37830ca25f5ef2c0083e450"
+                    "url": "https://download.gnome.org/sources/libgweather/40/libgweather-40.0.tar.xz",
+                    "sha256": "ca4e8f2a4baaa9fc6d75d8856adb57056ef1cd6e55c775ba878ae141b6276ee6"
                 }
             ]
         },
@@ -117,8 +117,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.1.tar.xz",
-                    "sha256": "8ff278e9c334f185236182709ba46ab727db2830d0b4e09485c1e582e1f2e4b7"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.40/evolution-data-server-3.40.0.tar.xz",
+                    "sha256": "ed572f0cb6a2365809943449a8ccbee652681e2d9a1a7f4a54b60cbb53d87445"
                 }
             ],
             "modules":[
@@ -139,8 +139,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
-                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9"
+                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.2.tar.xz",
+                    "sha256": "ef777b2696d15ec31ba8b940ecabc17fe7fab909584f9425258f54d295ccd122"
                 }
             ]
         },
@@ -155,16 +155,6 @@
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.20.tar.xz",
                     "sha256": "0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066"
-                }
-            ]
-        },
-        {
-            "name": "librest",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
-                    "sha256": "0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9"
                 }
             ]
         },
@@ -185,8 +175,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.38/gnome-maps-3.38.1.tar.xz",
-                    "sha256": "a9ef0e3705e00b5ff47d743452e5f550e726112aaf43c385bed3c599fa877e7b"
+                    "url": "https://download.gnome.org/sources/gnome-maps/40/gnome-maps-40.0.tar.xz",
+                    "sha256": "ec11dc6c9eea2698592500daf3ad673c1e4f64ebeb0d3d2823fb8655bb5d4a49"
                 }
             ]
         }
