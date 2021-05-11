@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -18,18 +18,27 @@
         "--talk-name=org.freedesktop.secrets",
         "--system-talk-name=org.freedesktop.GeoClue2",
         "--metadata=X-DConf=migrate-path=/org/gnome/maps/"
-     ],
-    "cleanup": ["/include", "/lib/pkgconfig",
-                "/share/pkgconfig", "/share/aclocal",
-                "/man", "/share/man", "/share/gtk-doc",
-                "/share/vala",
-                "*.la", "*.a"],
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
     "modules": [
         {
             "name": "libical",
-            "cleanup": [ "/lib/cmake"],
+            "cleanup": [
+                "/lib/cmake"
+            ],
             "buildsystem": "cmake-ninja",
-            "config-opts": [ 
+            "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_INSTALL_LIBDIR=lib",
                 "-DBUILD_SHARED_LIBS:BOOL=ON",
@@ -40,20 +49,32 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/libical/libical/releases/download/v3.0.8/libical-3.0.8.tar.gz",
-                    "sha256": "09fecacaf75ba5a242159e3a9758a5446b5ce4d0ab684f98a7040864e1d1286f"
+                    "type": "git",
+                    "url": "https://github.com/libical/libical.git",
+                    "commit": "dd2f75f3f78a386c90e171e134db1a780243d622",
+                    "tag": "v3.0.10",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag": "^3\\.0\\.[\\d]+$"
+                    }
                 }
             ]
         },
         {
             "name": "gnome-online-accounts",
-            "config-opts": ["--disable-documentation", "--disable-backend"],
+            "config-opts": [
+                "--disable-documentation",
+                "--disable-backend"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
-                    "sha256": "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.0.tar.xz",
+                    "sha256": "585c4f979f6f543b77bfdb4fb01eb18ba25c2aec5b7866c676d929616fb2c3fa",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gnome-online-accounts"
+                    }
                 }
             ]
         },
@@ -64,30 +85,40 @@
                 {
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz",
-                    "sha256": "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1"
+                    "sha256": "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "geocode-glib"
+                    }
                 }
             ]
         },
         {
             "name": "libgweather",
             "buildsystem": "meson",
-            "config-opts": ["-Denable-vala=false"],
+            "config-opts": [
+                "-Denable-vala=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/3.36/libgweather-3.36.1.tar.xz",
-                    "sha256": "de2709f0ee233b20116d5fa9861d406071798c4aa37830ca25f5ef2c0083e450"
+                    "url": "https://download.gnome.org/sources/libgweather/40/libgweather-40.0.tar.xz",
+                    "sha256": "ca4e8f2a4baaa9fc6d75d8856adb57056ef1cd6e55c775ba878ae141b6276ee6",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libgweather"
+                    }
                 }
             ]
         },
         {
-            "name" : "libcanberra-gtk3",
-            "buildsystem" : "autotools",
-            "sources" : [
+            "name": "libcanberra-gtk3",
+            "buildsystem": "autotools",
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
-                    "sha256" : "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
+                    "type": "archive",
+                    "url": "http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz",
+                    "sha256": "c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72"
                 }
             ]
         },
@@ -117,18 +148,25 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.38/evolution-data-server-3.38.1.tar.xz",
-                    "sha256": "8ff278e9c334f185236182709ba46ab727db2830d0b4e09485c1e582e1f2e4b7"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.40/evolution-data-server-3.40.1.tar.xz",
+                    "sha256": "eac75f348aa5defbe9473fa30ab6084635ee64d8e3eaaec60a62c27f149c3e22",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "evolution-data-server"
+                    }
                 }
             ],
-            "modules":[
+            "modules": [
                 "shared-modules/intltool/intltool-0.51.json"
             ]
         },
         {
             "name": "folks",
             "buildsystem": "meson",
-            "cleanup": [ "/bin", "/share/GConf" ],
+            "cleanup": [
+                "/bin",
+                "/share/GConf"
+            ],
             "config-opts": [
                 "-Dbluez_backend=false",
                 "-Dofono_backend=false",
@@ -140,7 +178,11 @@
                 {
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
-                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9"
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "folks"
+                    }
                 }
             ]
         },
@@ -154,28 +196,28 @@
                 {
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/libchamplain/0.12/libchamplain-0.12.20.tar.xz",
-                    "sha256": "0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066"
-                }
-            ]
-        },
-        {
-            "name": "librest",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
-                    "sha256": "0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9"
+                    "sha256": "0232b4bfcd130a1c5bda7b6aec266bf2d06e701e8093df1886f1e26bc1ba3066",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libchamplain"
+                    }
                 }
             ]
         },
         {
             "name": "libgfbgraph",
-            "cleanup": [ "/doc/libgfbgraph"],
+            "cleanup": [
+                "/doc/libgfbgraph"
+            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.4.tar.xz",
-                    "sha256": "6065391f35e7335588cc6b0cc4c1abbce7341488573a654551264cb9793b9379"
+                    "sha256": "6065391f35e7335588cc6b0cc4c1abbce7341488573a654551264cb9793b9379",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gfbgraph"
+                    }
                 }
             ]
         },
@@ -185,11 +227,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/3.38/gnome-maps-3.38.1.tar.xz",
-                    "sha256": "a9ef0e3705e00b5ff47d743452e5f550e726112aaf43c385bed3c599fa877e7b"
+                    "url": "https://download.gnome.org/sources/gnome-maps/40/gnome-maps-40.1.tar.xz",
+                    "sha256": "9805d4c05b3a3695746d3762b2816bffe6d9d7d56e17bcbb9d9d41dc2d02631a",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gnome-maps"
+                    }
                 }
             ]
         }
     ]
 }
-
