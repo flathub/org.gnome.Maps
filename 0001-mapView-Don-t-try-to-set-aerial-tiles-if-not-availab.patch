@@ -1,0 +1,42 @@
+From 84fc4b2ae319ea155de52adceaa83a4da9f82c92 Mon Sep 17 00:00:00 2001
+From: Marcus Lundblad <ml@update.uu.se>
+Date: Thu, 27 May 2021 23:12:34 +0200
+Subject: [PATCH] mapView: Don't try to set aerial tiles if not available
+
+Safe-guard agains setting the aerial tile source
+if it's not available in the service file.
+This avoid a crash if aerial was saved as last-used
+map type in gsettings and at next startup the service
+has dropped support.
+---
+ src/mapView.js | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/src/mapView.js b/src/mapView.js
+index 95dbe984..10e6d5a3 100644
+--- a/src/mapView.js
++++ b/src/mapView.js
+@@ -417,15 +417,17 @@ var MapView = GObject.registerClass({
+         this._mapType = mapType;
+ 
+         if (mapType !== MapType.LOCAL) {
+-            if (mapType === MapType.AERIAL) {
+-                if (Service.getService().tiles.hybridAerial &&
++            let tiles = Service.getService().tiles;
++
++            if (mapType === MapType.AERIAL && tiles.aerial) {
++                if (tiles.hybridAerial &&
+                     Application.settings.get('hybrid-aerial')) {
+                     this.view.map_source = MapSource.createHybridAerialSource();
+                 } else {
+                     this.view.map_source = MapSource.createAerialSource();
+                 }
+             } else {
+-                if (Service.getService().tiles.streetDark &&
++                if (tiles.streetDark &&
+                     Application.settings.get('night-mode')) {
+                     this.view.map_source = MapSource.createStreetDarkSource();
+                 } else {
+-- 
+2.31.1
+
