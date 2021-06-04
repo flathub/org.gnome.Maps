@@ -233,10 +233,6 @@
                         "type": "gnome",
                         "name": "gnome-maps"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "0001-mapView-Don-t-try-to-set-aerial-tiles-if-not-availab.patch"
                 }
             ]
         }
