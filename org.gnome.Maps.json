@@ -148,8 +148,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.40/evolution-data-server-3.40.4.tar.xz",
-                    "sha256": "87c185f18c37270e3611981f19bd9221ac974c807462c8dce90bea08712c5800",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.0.tar.xz",
+                    "sha256": "e8fdd3bc47a07d6f8a3052bbcae880f20f6dbc4f6973a8e90d00169bb99b1635",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -177,8 +177,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
-                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
+                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.3.tar.xz",
+                    "sha256": "21d737faf093f4be065473ee70ca20885b9a2c3685941dba24c2239fd3c544a5",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
@@ -227,8 +227,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/40/gnome-maps-40.4.tar.xz",
-                    "sha256": "2c5b7e1e65f7f4e54fe86eddda1138eaa6c0691a149403d95cbe22edc822509c",
+                    "url": "https://download.gnome.org/sources/gnome-maps/41/gnome-maps-41.0.tar.xz",
+                    "sha256": "1b4082db6c070e9dcb085259ebe3c8a421b8e1e8b27b3284ab605750bb9d8c92",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
