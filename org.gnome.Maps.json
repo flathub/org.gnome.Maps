@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -69,8 +69,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.0.tar.xz",
-                    "sha256": "585c4f979f6f543b77bfdb4fb01eb18ba25c2aec5b7866c676d929616fb2c3fa",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.1.tar.xz",
+                    "sha256": "955a03128d0e87855d34d7c534e088f6286ed7ac01baa4ef824ef42a2cb39aad",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-online-accounts"
@@ -148,8 +148,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.0.tar.xz",
-                    "sha256": "e8fdd3bc47a07d6f8a3052bbcae880f20f6dbc4f6973a8e90d00169bb99b1635",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.1.tar.xz",
+                    "sha256": "e6e67f2a77d0ff3e6da50b03dc5fa266e716626bcda2ef44144e317e35f2f528",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -187,6 +187,16 @@
             ]
         },
         {
+            "name" : "librest",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://gitlab.gnome.org/GNOME/librest/-/archive/0.8.1/librest-0.8.1.tar.gz",
+                    "sha256" : "2bdd1be07a9150b1c6ceea6e01dedf2efcff564381cae0cd6c7330403efe59d7"
+                }
+            ]
+        },
+        {
             "name": "libchamplain",
             "buildsystem": "meson",
             "config-opts": [
@@ -205,30 +215,13 @@
             ]
         },
         {
-            "name": "libgfbgraph",
-            "cleanup": [
-                "/doc/libgfbgraph"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.4.tar.xz",
-                    "sha256": "6065391f35e7335588cc6b0cc4c1abbce7341488573a654551264cb9793b9379",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gfbgraph"
-                    }
-                }
-            ]
-        },
-        {
             "name": "gnome-maps",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/41/gnome-maps-41.0.tar.xz",
-                    "sha256": "1b4082db6c070e9dcb085259ebe3c8a421b8e1e8b27b3284ab605750bb9d8c92",
+                    "url": "https://download.gnome.org/sources/gnome-maps/41/gnome-maps-41.1.tar.xz",
+                    "sha256": "5edc94a579470ced47ced292c54aba67cbe704818e17406c090c01d4395be1ad",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
