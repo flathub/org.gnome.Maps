@@ -51,8 +51,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libical/libical.git",
-                    "commit": "a4d4c3809580e0a4943d6b085f699bae4a2e9dee",
-                    "tag": "v3.0.11",
+                    "commit": "a8034ce04de60d71bbcd2c6bd0df7056160007c9",
+                    "tag": "v3.0.13",
                     "x-checker-data": {
                         "type": "git",
                         "tag": "^3\\.0\\.[\\d]+$"
@@ -148,8 +148,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.1.tar.xz",
-                    "sha256": "e6e67f2a77d0ff3e6da50b03dc5fa266e716626bcda2ef44144e317e35f2f528",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.3.tar.xz",
+                    "sha256": "6f5847a1234799073e9585db861c21381a09ed550dc0a2125f00ba5f90bd361d",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -220,8 +220,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/41/gnome-maps-41.1.tar.xz",
-                    "sha256": "5edc94a579470ced47ced292c54aba67cbe704818e17406c090c01d4395be1ad",
+                    "url": "https://download.gnome.org/sources/gnome-maps/41/gnome-maps-41.2.tar.xz",
+                    "sha256": "81821b4cafc641cd500d73b330c63ce5a05a84f0430716d63e88b3caeaacfd0c",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
