@@ -51,8 +51,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libical/libical.git",
-                    "commit": "a8034ce04de60d71bbcd2c6bd0df7056160007c9",
-                    "tag": "v3.0.13",
+                    "commit": "098fb68688b853410daed96812a6fe0a22e0e15f",
+                    "tag": "v3.0.14",
                     "x-checker-data": {
                         "type": "git",
                         "tag": "^3\\.0\\.[\\d]+$"
@@ -148,8 +148,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.3.tar.xz",
-                    "sha256": "6f5847a1234799073e9585db861c21381a09ed550dc0a2125f00ba5f90bd361d",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.4.tar.xz",
+                    "sha256": "7dfb41b3e6c05811d449a8de4dfc77ab9b19f8edf20b32fdd85791866226d252",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -177,8 +177,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.3.tar.xz",
-                    "sha256": "21d737faf093f4be065473ee70ca20885b9a2c3685941dba24c2239fd3c544a5",
+                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
@@ -187,12 +187,12 @@
             ]
         },
         {
-            "name" : "librest",
-            "sources" : [
+            "name": "librest",
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/librest/-/archive/0.8.1/librest-0.8.1.tar.gz",
-                    "sha256" : "2bdd1be07a9150b1c6ceea6e01dedf2efcff564381cae0cd6c7330403efe59d7"
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/GNOME/librest/-/archive/0.8.1/librest-0.8.1.tar.gz",
+                    "sha256": "2bdd1be07a9150b1c6ceea6e01dedf2efcff564381cae0cd6c7330403efe59d7"
                 }
             ]
         },
