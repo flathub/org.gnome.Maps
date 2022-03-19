@@ -148,8 +148,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.42/evolution-data-server-3.42.4.tar.xz",
-                    "sha256": "7dfb41b3e6c05811d449a8de4dfc77ab9b19f8edf20b32fdd85791866226d252",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.0.tar.xz",
+                    "sha256": "0d8881b5c51e1b91761b1945db264a46aabf54a73eea1ca8f448b207815d582e",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -215,13 +215,24 @@
             ]
         },
         {
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "sources": [
+            	{
+            	    "type": "archive",
+            	    "url": "https://download.gnome.org/sources/libhandy/1.6/libhandy-1.6.1.tar.xz",
+            	    "sha256": "6eab0384404d56bd1b1fa059d9a081177778f6ae080ffc2120f28656ca7462a4"
+            	}
+            ]
+        },
+        {
             "name": "gnome-maps",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/41/gnome-maps-41.4.tar.xz",
-                    "sha256": "e340b13f46fe0b7d5b0f8f01413291ddcd870c74a5c38fa24cac1f585e70393e",
+                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.0.tar.xz",
+                    "sha256": "054486d3774073706a76a981417978d151be3b7224d723775bbe316efa2479df",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
