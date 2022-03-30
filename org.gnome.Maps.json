@@ -68,8 +68,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.1.tar.xz",
-                    "sha256": "955a03128d0e87855d34d7c534e088f6286ed7ac01baa4ef824ef42a2cb39aad",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.44/gnome-online-accounts-3.44.0.tar.xz",
+                    "sha256": "381d5d4106f435b6f87786aa049be784774e15996adcc02789807afc87ea7342",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-online-accounts"
@@ -166,8 +166,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz",
-                    "sha256": "0fff8a896330cd82aee4598324f7e541c884d0337536212723b4beb38c759086",
+                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
@@ -176,12 +176,12 @@
             ]
         },
         {
-            "name" : "librest",
-            "sources" : [
+            "name": "librest",
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://gitlab.gnome.org/GNOME/librest/-/archive/0.8.1/librest-0.8.1.tar.gz",
-                    "sha256" : "2bdd1be07a9150b1c6ceea6e01dedf2efcff564381cae0cd6c7330403efe59d7"
+                    "type": "archive",
+                    "url": "https://gitlab.gnome.org/GNOME/librest/-/archive/0.8.1/librest-0.8.1.tar.gz",
+                    "sha256": "2bdd1be07a9150b1c6ceea6e01dedf2efcff564381cae0cd6c7330403efe59d7"
                 }
             ]
         },
