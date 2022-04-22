@@ -109,20 +109,17 @@
             ]
         },
         {
-            "name": "libgweather",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Denable-vala=false"
+            "name" : "libgweather",
+            "config-opts" : [
+                "-Denable_vala=false",
+                "-Dgtk_doc=false"
             ],
-            "sources": [
+            "buildsystem" : "meson",
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/40/libgweather-40.0.tar.xz",
-                    "sha256": "ca4e8f2a4baaa9fc6d75d8856adb57056ef1cd6e55c775ba878ae141b6276ee6",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "libgweather"
-                    }
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libgweather.git",
+                    "branch" : "main"
                 }
             ]
         },
@@ -158,13 +155,14 @@
                 "-DENABLE_GTK_DOC=OFF",
                 "-DENABLE_EXAMPLES=OFF",
                 "-DENABLE_VALA_BINDINGS=ON",
-                "-DENABLE_INTROSPECTION=ON"
+                "-DENABLE_INTROSPECTION=ON",
+                "-DENABLE_WEATHER=OFF"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.0.tar.xz",
-                    "sha256": "0d8881b5c51e1b91761b1945db264a46aabf54a73eea1ca8f448b207815d582e",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.1.tar.xz",
+                    "sha256": "6e05a90204a276f99d932097f1032cc17dd1d8e265c7c56727c63240fd4c0ccf",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -274,8 +272,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.0.tar.xz",
-                    "sha256": "054486d3774073706a76a981417978d151be3b7224d723775bbe316efa2479df",
+                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.1.tar.xz",
+                    "sha256": "082f8494101fd3cd31bd4f1ae9881710e32a533fb2ddb7a57122796c9466d2ae",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
