@@ -31,10 +31,10 @@
         "*.a"
     ],
     "modules": [
-    	{
+        {
             "name": "libgeoclue",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Denable-backend=false",
                 "-Dlibgeoclue=true",
                 "-Dintrospection=true",
@@ -42,7 +42,7 @@
             ],
             "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
                     "url": "https://gitlab.freedesktop.org/geoclue/geoclue.git"
                 }
             ]
@@ -153,8 +153,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.0.tar.xz",
-                    "sha256": "0d8881b5c51e1b91761b1945db264a46aabf54a73eea1ca8f448b207815d582e",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.1.tar.xz",
+                    "sha256": "6e05a90204a276f99d932097f1032cc17dd1d8e265c7c56727c63240fd4c0ccf",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -182,8 +182,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz",
-                    "sha256": "0fff8a896330cd82aee4598324f7e541c884d0337536212723b4beb38c759086",
+                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
@@ -226,8 +226,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.0.tar.xz",
-                    "sha256": "054486d3774073706a76a981417978d151be3b7224d723775bbe316efa2479df",
+                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.1.tar.xz",
+                    "sha256": "082f8494101fd3cd31bd4f1ae9881710e32a533fb2ddb7a57122796c9466d2ae",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
