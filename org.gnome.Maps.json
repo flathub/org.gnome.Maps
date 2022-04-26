@@ -31,10 +31,10 @@
         "*.a"
     ],
     "modules": [
-    	{
+        {
             "name": "libgeoclue",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Denable-backend=false",
                 "-Dlibgeoclue=true",
                 "-Dintrospection=true",
@@ -42,7 +42,7 @@
             ],
             "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
                     "url": "https://gitlab.freedesktop.org/geoclue/geoclue.git",
                     "commit": "10998ca3215fb6d21b5a32fdf78bb5feffaf4c0f",
                     "tag": "2.6.0"
@@ -111,17 +111,17 @@
             ]
         },
         {
-            "name" : "libgweather",
-            "config-opts" : [
+            "name": "libgweather",
+            "config-opts": [
                 "-Denable_vala=false",
                 "-Dgtk_doc=false"
             ],
-            "buildsystem" : "meson",
-            "sources" : [
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libgweather.git",
-                    "commit" : "641207aebadfc917806d93fc23aceffcefea79be"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libgweather.git",
+                    "commit": "641207aebadfc917806d93fc23aceffcefea79be"
                 }
             ]
         },
@@ -182,8 +182,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz",
-                    "sha256": "0fff8a896330cd82aee4598324f7e541c884d0337536212723b4beb38c759086",
+                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
