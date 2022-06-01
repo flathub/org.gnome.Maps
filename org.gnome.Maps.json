@@ -153,8 +153,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.1.tar.xz",
-                    "sha256": "6e05a90204a276f99d932097f1032cc17dd1d8e265c7c56727c63240fd4c0ccf",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.2.tar.xz",
+                    "sha256": "2ed72afe4d6bb170f8728faea0907fee10212dfde7a9fab82fbcc83d0f22f028",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -226,8 +226,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.1.tar.xz",
-                    "sha256": "082f8494101fd3cd31bd4f1ae9881710e32a533fb2ddb7a57122796c9466d2ae",
+                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.2.tar.xz",
+                    "sha256": "5e6d1b0ca7cc939ea91aadfda5633a865ea85fa5650036861b2bfef0bfd069b1",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
