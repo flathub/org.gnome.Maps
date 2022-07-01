@@ -31,10 +31,10 @@
         "*.a"
     ],
     "modules": [
-    	{
+        {
             "name": "libgeoclue",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Denable-backend=false",
                 "-Dlibgeoclue=true",
                 "-Dintrospection=true",
@@ -42,7 +42,7 @@
             ],
             "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
                     "url": "https://gitlab.freedesktop.org/geoclue/geoclue.git",
                     "commit": "10998ca3215fb6d21b5a32fdf78bb5feffaf4c0f",
                     "tag": "2.6.0"
@@ -101,8 +101,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz",
-                    "sha256": "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1",
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.3.tar.xz",
+                    "sha256": "1dfeae83b90eccca1b6cf7dcf7c5e3b317828cf0b56205c4471ef0f911999766",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "geocode-glib"
@@ -111,17 +111,17 @@
             ]
         },
         {
-            "name" : "libgweather",
-            "config-opts" : [
+            "name": "libgweather",
+            "config-opts": [
                 "-Denable_vala=false",
                 "-Dgtk_doc=false"
             ],
-            "buildsystem" : "meson",
-            "sources" : [
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libgweather.git",
-                    "commit" : "641207aebadfc917806d93fc23aceffcefea79be"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libgweather.git",
+                    "commit": "641207aebadfc917806d93fc23aceffcefea79be"
                 }
             ]
         },
@@ -153,8 +153,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.2.tar.xz",
-                    "sha256": "2ed72afe4d6bb170f8728faea0907fee10212dfde7a9fab82fbcc83d0f22f028",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.3.tar.xz",
+                    "sha256": "9043ab53f341da10315c550384a6b320430193fc8d7861dd25c4e9b2e0be425b",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -182,8 +182,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz",
-                    "sha256": "0fff8a896330cd82aee4598324f7e541c884d0337536212723b4beb38c759086",
+                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
@@ -226,8 +226,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.2.tar.xz",
-                    "sha256": "5e6d1b0ca7cc939ea91aadfda5633a865ea85fa5650036861b2bfef0bfd069b1",
+                    "url": "https://download.gnome.org/sources/gnome-maps/42/gnome-maps-42.3.tar.xz",
+                    "sha256": "e456467facf3c8fd10c9386b5e74c43d9595ad9fb75257f7da014af983d69cd1",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
