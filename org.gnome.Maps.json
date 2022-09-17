@@ -31,10 +31,10 @@
         "*.a"
     ],
     "modules": [
-    	{
+        {
             "name": "libgeoclue",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Denable-backend=false",
                 "-Dlibgeoclue=true",
                 "-Dintrospection=true",
@@ -42,7 +42,7 @@
             ],
             "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
                     "url": "https://gitlab.freedesktop.org/geoclue/geoclue.git",
                     "commit": "10998ca3215fb6d21b5a32fdf78bb5feffaf4c0f",
                     "tag": "2.6.0"
@@ -86,8 +86,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.44/gnome-online-accounts-3.44.0.tar.xz",
-                    "sha256": "381d5d4106f435b6f87786aa049be784774e15996adcc02789807afc87ea7342",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.46/gnome-online-accounts-3.46.0.tar.xz",
+                    "sha256": "5e7859ce4858a6b99d3995ed70527d66e297bb90bbf75ec8780fe9da22c1fcaa",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-online-accounts"
@@ -101,8 +101,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.3.tar.xz",
-                    "sha256": "1dfeae83b90eccca1b6cf7dcf7c5e3b317828cf0b56205c4471ef0f911999766",
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz",
+                    "sha256": "2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "geocode-glib"
@@ -111,18 +111,18 @@
             ]
         },
         {
-            "name" : "libgweather",
-            "config-opts" : [
+            "name": "libgweather",
+            "config-opts": [
                 "-Denable_vala=false",
                 "-Dgtk_doc=false",
                 "-Dsoup2=true"
             ],
-            "buildsystem" : "meson",
-            "sources" : [
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libgweather.git",
-                    "commit" : "641207aebadfc917806d93fc23aceffcefea79be"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libgweather.git",
+                    "commit": "641207aebadfc917806d93fc23aceffcefea79be"
                 }
             ]
         },
@@ -154,8 +154,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.44/evolution-data-server-3.44.3.tar.xz",
-                    "sha256": "9043ab53f341da10315c550384a6b320430193fc8d7861dd25c4e9b2e0be425b",
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.46/evolution-data-server-3.46.0.tar.xz",
+                    "sha256": "e5fa28095a183f7ab5a928e35a828379b481ddef83ed4c7b51a2e3c4aef5cdab",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "evolution-data-server"
@@ -183,8 +183,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/folks/0.15/folks-0.15.5.tar.xz",
-                    "sha256": "0fff8a896330cd82aee4598324f7e541c884d0337536212723b4beb38c759086",
+                    "url": "https://download.gnome.org/sources/folks/0.14/folks-0.14.0.tar.xz",
+                    "sha256": "d6e778da637d3b33fd9a6b45115e8157d8868211dc08b943d1075b5eb7282bb9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "folks"
