@@ -10,7 +10,6 @@
         "--socket=wayland",
         "--device=dri",
         "--share=network",
-        "--talk-name=org.gnome.OnlineAccounts",
         "--talk-name=org.gnome.evolution.dataserver.AddressBook10",
         "--talk-name=org.gnome.evolution.dataserver.Calendar8",
         "--talk-name=org.gnome.evolution.dataserver.Sources5",
@@ -118,8 +117,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.0/libshumate-1.0.2.tar.xz",
-                    "sha256": "fe336b9a26b58e2972e1863f703ad88343143920ffca2d58f134ce341aed988d",
+                    "url": "https://download.gnome.org/sources/libshumate/1.0/libshumate-1.0.3.tar.xz",
+                    "sha256": "77a192f0dfec082b8de20b1939f3adf03eed41114d49fdaae2bbb2729ceb015a",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libshumate"
@@ -133,8 +132,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/43/gnome-maps-43.1.tar.xz",
-                    "sha256": "1f751a35bd589ad793f5b14135f293e4ec6d4b2c30733fec760c687d8f143126",
+                    "url": "https://download.gnome.org/sources/gnome-maps/43/gnome-maps-43.2.tar.xz",
+                    "sha256": "c0221d250be45ea36e971ae63bfde971a46145c967b1c659e96c5b072a71551d",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-maps"
