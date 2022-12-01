@@ -30,10 +30,10 @@
         "*.a"
     ],
     "modules": [
-    	{
+        {
             "name": "libgeoclue",
             "buildsystem": "meson",
-            "config-opts" : [
+            "config-opts": [
                 "-Denable-backend=false",
                 "-Dlibgeoclue=true",
                 "-Dintrospection=true",
@@ -41,7 +41,7 @@
             ],
             "sources": [
                 {
-                    "type" : "git",
+                    "type": "git",
                     "url": "https://gitlab.freedesktop.org/geoclue/geoclue.git",
                     "commit": "10998ca3215fb6d21b5a32fdf78bb5feffaf4c0f",
                     "tag": "2.6.0"
@@ -51,8 +51,8 @@
         {
             "name": "geocode-glib",
             "buildsystem": "meson",
-            "builddir" : true,
-            "config-opts" : [
+            "builddir": true,
+            "config-opts": [
                 "--libdir=/app/lib",
                 "-Denable-gtk-doc=false",
                 "-Dsoup2=false"
@@ -70,18 +70,18 @@
             ]
         },
         {
-            "name" : "libgweather",
-            "config-opts" : [
+            "name": "libgweather",
+            "config-opts": [
                 "-Denable_vala=false",
                 "-Dgtk_doc=false",
                 "-Dsoup2=false"
             ],
-            "buildsystem" : "meson",
-            "sources" : [
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libgweather/4.1/libgweather-4.1.1.tar.xz",
-                    "sha256": "55ae7b4ff349473051ab42c601ab82e2f4b98456264dddc0c5d1971dad5603f2",
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libgweather/40/libgweather-40.0.tar.xz",
+                    "sha256": "ca4e8f2a4baaa9fc6d75d8856adb57056ef1cd6e55c775ba878ae141b6276ee6",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libgweather"
@@ -93,9 +93,9 @@
             "name": "librest",
             "buildsystem": "meson",
             "config-opts": [
-            	"-Dgtk_doc=false",
-            	"-Dexamples=false",
-            	"-Dsoup2=false"
+                "-Dgtk_doc=false",
+                "-Dexamples=false",
+                "-Dsoup2=false"
             ],
             "sources": [
                 {
