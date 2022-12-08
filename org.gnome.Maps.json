@@ -84,7 +84,11 @@
                     "sha256": "55ae7b4ff349473051ab42c601ab82e2f4b98456264dddc0c5d1971dad5603f2",
                     "x-checker-data": {
                         "type": "gnome",
-                        "name": "libgweather"
+                        "name": "libgweather",
+                        "versions": {
+                            "<": "40.0",
+                            ">=": "4.0.0"
+                        }
                     }
                 }
             ]
