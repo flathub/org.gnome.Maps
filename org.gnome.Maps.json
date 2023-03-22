@@ -10,7 +10,6 @@
         "--socket=wayland",
         "--device=dri",
         "--share=network",
-        "--talk-name=org.freedesktop.secrets",
         "--metadata=X-DConf=migrate-path=/org/gnome/maps/"
     ],
     "cleanup": [
