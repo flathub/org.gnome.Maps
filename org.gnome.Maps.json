@@ -107,6 +107,7 @@
                     "sha256": "77a192f0dfec082b8de20b1939f3adf03eed41114d49fdaae2bbb2729ceb015a",
                     "x-checker-data": {
                         "type": "gnome",
+                        "stable-only": false,
                         "name": "libshumate"
                     }
                 }
