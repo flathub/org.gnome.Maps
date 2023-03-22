@@ -81,8 +81,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/GNOME/librest/-/archive/0.9.1/librest-0.9.1.tar.gz",
-                    "sha256": "d91247d7f8fd6c63e61bd27ad1a6ddb6819e5279286fc2ded84b5b8bf10b330e"
+                    "url": "https://download.gnome.org/sources/rest/0.9/rest-0.9.1.tar.xz",
+                    "sha256": "9266a5c10ece383e193dfb7ffb07b509cc1f51521ab8dad76af96ed14212c2e3",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "rest",
+                        "stable-only": false
+                    }
                 }
             ]
         },
