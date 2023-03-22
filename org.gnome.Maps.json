@@ -10,10 +10,6 @@
         "--socket=wayland",
         "--device=dri",
         "--share=network",
-        "--talk-name=org.gnome.evolution.dataserver.AddressBook10",
-        "--talk-name=org.gnome.evolution.dataserver.Calendar8",
-        "--talk-name=org.gnome.evolution.dataserver.Sources5",
-        "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
         "--talk-name=org.freedesktop.secrets",
         "--metadata=X-DConf=migrate-path=/org/gnome/maps/"
     ],
