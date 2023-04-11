@@ -123,6 +123,7 @@
                     "sha256": "6003eb73dd9fd269b4a91bed9bf03ee9ab240c5124eedabf28be22a3fefba595",
                     "x-checker-data": {
                         "type": "gnome",
+                        "is-important": true,
                         "name": "gnome-maps"
                     }
                 }
