@@ -103,8 +103,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.0/libshumate-1.0.3.tar.xz",
-                    "sha256": "77a192f0dfec082b8de20b1939f3adf03eed41114d49fdaae2bbb2729ceb015a",
+                    "url": "https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.beta.tar.xz",
+                    "sha256": "10d7f4c55d651881dfa6a706200ad29d148043a6a76d3642f02394313ac5102c",
                     "x-checker-data": {
                         "type": "gnome",
                         "stable-only": false,
@@ -119,8 +119,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/44/gnome-maps-44.3.tar.xz",
-                    "sha256": "3be13b21eeba9a9da30e69df16d718beb130edbfbd406eb8f402bfea17412602",
+                    "url": "https://download.gnome.org/sources/gnome-maps/44/gnome-maps-44.4.tar.xz",
+                    "sha256": "dda7668265a70952960c49519cfbfbfa35768326fc5b80b2617f14ffb2c9b873",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
