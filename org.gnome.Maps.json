@@ -1,7 +1,7 @@
 {
     "id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -57,8 +57,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgweather/4.2/libgweather-4.2.0.tar.xz",
-                    "sha256": "af8a812da0d8976a000e1d62572c256086a817323fbf35b066dbfdd8d2ca6203",
+                    "url": "https://download.gnome.org/sources/libgweather/4.4/libgweather-4.4.0.tar.xz",
+                    "sha256": "366e866ff2a708b894cfea9475b8e8ff54cb3e2b477ea72a8ade0dabee5f48a4",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libgweather",
@@ -92,19 +92,48 @@
             ]
         },
         {
+            "name" : "protobuf",
+            "buildsystem" : "autotools",
+            "config-opts": [ "DIST_LANG=cpp" ],
+            "cleanup" : [
+                "/bin/protoc*",
+                "/lib/libprotoc*",
+                "/lib/libprotobuf-lite*"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz",
+                    "sha256" : "77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2"
+                }
+            ]
+        },
+        {
+            "name" : "protobuf-c",
+            "buildsystem" : "autotools",
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz",
+                    "sha256" : "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
+                }
+            ]
+        },
+        {
             "name": "libshumate",
             "buildsystem": "meson",
             "config-opts": [
                 "-Ddemos=false",
                 "-Dgtk_doc=false",
                 "-Dvapi=false",
-                "-Dlibsoup3=true"
+                "-Dlibsoup3=true",
+                "-Dvector_renderer=true"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.0/libshumate-1.0.5.tar.xz",
-                    "sha256": "a8cfd8df9177ee44b04733b017af13c9e93f98765cdc89b750a48edaf701956c",
+                    "url": "https://download.gnome.org/sources/libshumate/1.1/libshumate-1.1.0.tar.xz",
+                    "sha256": "b3b7c4c2d3002f37b951c9ca99b09275d0aa82265c69f53374ce12faefd3b14e",
                     "x-checker-data": {
                         "type": "gnome",
                         "stable-only": true,
@@ -119,8 +148,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/44/gnome-maps-44.4.tar.xz",
-                    "sha256": "dda7668265a70952960c49519cfbfbfa35768326fc5b80b2617f14ffb2c9b873",
+                    "url": "https://download.gnome.org/sources/gnome-maps/45/gnome-maps-45.0.tar.xz",
+                    "sha256": "9b60107c3157162631b95bcba64c51af45e2d49009452863f84e1f2bcd46d610",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
