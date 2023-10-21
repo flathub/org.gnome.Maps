@@ -92,46 +92,48 @@
             ]
         },
         {
-            "name" : "protobuf",
-            "buildsystem" : "autotools",
-            "config-opts": [ "DIST_LANG=cpp" ],
-            "cleanup" : [
+            "name": "protobuf",
+            "buildsystem": "autotools",
+            "config-opts": [
+                "DIST_LANG=cpp"
+            ],
+            "cleanup": [
                 "/bin/protoc*",
                 "/lib/libprotoc*",
                 "/lib/libprotobuf-lite*"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz",
-                    "sha256" : "77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2"
+                    "type": "archive",
+                    "url": "https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz",
+                    "sha256": "77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2"
                 }
             ]
         },
         {
-            "name" : "protobuf-c",
-            "buildsystem" : "autotools",
-            "sources" : [
+            "name": "protobuf-c",
+            "buildsystem": "autotools",
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz",
-                    "sha256" : "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
+                    "type": "archive",
+                    "url": "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz",
+                    "sha256": "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
                 }
             ]
         },
         {
-            "name" : "libportal",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Ddocs=false",
                 "-Dvapi=false",
                 "-Dbackend-gtk3=disabled",
                 "-Dbackend-gtk4=enabled"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+                    "type": "archive",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
                     "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
                 }
             ]
@@ -153,7 +155,7 @@
                     "sha256": "b3b7c4c2d3002f37b951c9ca99b09275d0aa82265c69f53374ce12faefd3b14e",
                     "x-checker-data": {
                         "type": "gnome",
-                        "stable-only": true,
+                        "stable-only": false,
                         "name": "libshumate"
                     }
                 }
@@ -165,8 +167,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/45/gnome-maps-45.0.tar.xz",
-                    "sha256": "9b60107c3157162631b95bcba64c51af45e2d49009452863f84e1f2bcd46d610",
+                    "url": "https://download.gnome.org/sources/gnome-maps/45/gnome-maps-45.1.tar.xz",
+                    "sha256": "bf69c50e2e19b15dbcd0a0ef3827d402a195ab4a2029b9b62e54abf38ef6df7e",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
