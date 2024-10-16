@@ -92,32 +92,22 @@
             ]
         },
         {
-            "name": "protobuf",
-            "buildsystem": "autotools",
-            "config-opts": [
-                "DIST_LANG=cpp"
-            ],
-            "cleanup": [
-                "/bin/protoc*",
-                "/lib/libprotoc*",
-                "/lib/libprotobuf-lite*"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/protocolbuffers/protobuf/releases/download/v3.17.3/protobuf-all-3.17.3.tar.gz",
-                    "sha256": "77ad26d3f65222fd96ccc18b055632b0bfedf295cb748b712a98ba1ac0b704b2"
-                }
-            ]
-        },
-        {
             "name": "protobuf-c",
             "buildsystem": "autotools",
+            "config-opts": [
+                "--disable-protoc"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/protobuf-c/protobuf-c/releases/download/v1.4.0/protobuf-c-1.4.0.tar.gz",
-                    "sha256": "26d98ee9bf18a6eba0d3f855ddec31dbe857667d269bc0b6017335572f85bbcb"
+                    "url": "https://github.com/protobuf-c/protobuf-c/releases/download/v1.5.0/protobuf-c-1.5.0.tar.gz",
+                    "sha256": "7b404c63361ed35b3667aec75cc37b54298d56dd2bcf369de3373212cc06fd98",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/protobuf-c/protobuf-c/releases/latest",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"protobuf-c-\" + $version + \".tar.gz\") | .browser_download_url"
+                    }
                 }
             ]
         },
@@ -133,8 +123,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
-                    "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz",
+                    "sha256": "281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac",
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/flatpak/libportal/releases/latest",
+                        "version-query": ".tag_name",
+                        "url-query": ".assets[] | select(.name==\"libportal-\" + $version + \".tar.xz\") | .browser_download_url"
+                    }
                 }
             ]
         },
