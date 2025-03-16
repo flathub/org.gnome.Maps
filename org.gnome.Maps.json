@@ -85,8 +85,7 @@
                     "sha256": "9266a5c10ece383e193dfb7ffb07b509cc1f51521ab8dad76af96ed14212c2e3",
                     "x-checker-data": {
                         "type": "gnome",
-                        "name": "rest",
-                        "stable-only": false
+                        "name": "rest"
                     }
                 }
             ]
@@ -149,7 +148,6 @@
                     "sha256": "3984368e0259862b3810d1ddc86d2dadd6d372a2b32376ccf4aff7c2e48c6d30",
                     "x-checker-data": {
                         "type": "gnome",
-                        "stable-only": false,
                         "name": "libshumate"
                     }
                 }
