@@ -159,8 +159,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/48/gnome-maps-48.5.tar.xz",
-                    "sha256": "541d16f1cf3c450c17df713be62377a3bf5807a78b4517e09484d1a1bf44ab32",
+                    "url": "https://download.gnome.org/sources/gnome-maps/48/gnome-maps-48.6.tar.xz",
+                    "sha256": "3ada9a3155175a519d415f0b97d0fed76f4f4beb8b60212a017697a32cbe81a6",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
