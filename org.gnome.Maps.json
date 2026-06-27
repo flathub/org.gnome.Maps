@@ -140,8 +140,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz",
-                    "sha256": "de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.10.0/libportal-0.10.0.tar.xz",
+                    "sha256": "1c74a3f7becbd4ff745d7f565afd06e97e50eb080a0e268cb14bb55289a745bf",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/flatpak/libportal/releases/latest",
@@ -162,8 +162,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.6/libshumate-1.6.1.tar.xz",
-                    "sha256": "b36aad34500791785f546684d0f2ed644e4819ff4e85ae67a2245f159eccb2d4",
+                    "url": "https://download.gnome.org/sources/libshumate/1.6/libshumate-1.6.2.tar.xz",
+                    "sha256": "22364bb98f8b520334336ab82240196a0963489b86a5b38328e1bea2b64f3a9e",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libshumate"
@@ -177,8 +177,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.1.tar.xz",
-                    "sha256": "42cdf0367f945ce3db1203a6bcfd1d5f5f36d9cac361c81c18567b93130de9eb",
+                    "url": "https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.2.tar.xz",
+                    "sha256": "28a4467d1ec9fe38eb7f862674c199e884086e25e4c0b0d80eb504568202cebf",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
