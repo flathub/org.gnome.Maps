@@ -1,7 +1,7 @@
 {
     "id": "org.gnome.Maps",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "50",
+    "runtime-version": "51",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-maps",
     "finish-args": [
@@ -140,8 +140,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.10.0/libportal-0.10.0.tar.xz",
-                    "sha256": "1c74a3f7becbd4ff745d7f565afd06e97e50eb080a0e268cb14bb55289a745bf",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.11.0/libportal-0.11.0.tar.xz",
+                    "sha256": "abb9e452a1c372133bd3eb8f0bb30d07b2d0a8fb02001c4155cf287555db4040",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://api.github.com/repos/flatpak/libportal/releases/latest",
@@ -162,8 +162,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libshumate/1.6/libshumate-1.6.3.tar.xz",
-                    "sha256": "fd15c91396dcd82fce3021648541aa891e71a6bddeffc03d38597580a7da8ca1",
+                    "url": "https://download.gnome.org/sources/libshumate/1.7/libshumate-1.7.0.tar.xz",
+                    "sha256": "3896cc4b6a7bf83141c27df23ce48cdd68467603bc6b764960307cdcbbef80e5",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libshumate"
@@ -177,8 +177,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.4.tar.xz",
-                    "sha256": "45308c1e4ecae8ef1d356e88d97a10671ffe8030e9f897f9c2c8b2b96935434a",
+                    "url": "https://download.gnome.org/sources/gnome-maps/51/gnome-maps-51.0.tar.xz",
+                    "sha256": "9136d4fdb594749b63e92fa4608260ccbc4f71cc6dbf19620db6565eb56e8f67",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
