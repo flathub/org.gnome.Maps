@@ -128,7 +128,6 @@
                 }
             ]
         },
-        "shared-modules/libportal/libportal.json",
         {
             "name": "libshumate",
             "buildsystem": "meson",
